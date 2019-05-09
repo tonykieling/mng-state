@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import createPersistedState from "use-persisted-state";
 
 import Login from './components/Login.js'
-
+import Counter from './components/Counter.js'
 
 // const Counter = ({ id }) => {
 //   console.log("id: ", id)
@@ -30,12 +30,10 @@ function App() {
 
   return (
     <div>
-      {/* <Counter id="id1" />
-      <Counter id="id2" /> */}
+      <Counter id="id1" />
+      <Counter id="id2" />
       <input type="text" onChange={event => setLogin(event.target.value)} />
       <Login login={login} />
-      {/* <Login render={props =>  } /> */}
-      {/* render={(props) => <Home {...props} userLogged={this.state.userLogged} />} /> */}
     </div>
   );
 }
