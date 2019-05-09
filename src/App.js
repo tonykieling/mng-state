@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import createPersistedState from "use-persisted-state";
+
+import Login from './components/Login.js'
+
+
+// const Counter = ({ id }) => {
+//   console.log("id: ", id)
+//   const useCounterState = createPersistedState(id);
+//   const [count, setCount] = useCounterState(0);
+//   return (
+//     <div>
+//       <p>You clicked {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>Click me</button>
+//     </div>
+//   );
+// };
+
+// const Login = ({ login }) => {
+//   console.log("App-login:", login)
+//   return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
+// };
+
 
 function App() {
+  // Declare a new state variable, which we'll call "count"
+  const useLoginState = createPersistedState("");
+  const [login, setLogin] = useLoginState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Counter id="id1" />
+      <Counter id="id2" /> */}
+      <input type="text" onChange={event => setLogin(event.target.value)} />
+      <Login login={login} />
+      {/* <Login render={props =>  } /> */}
+      {/* render={(props) => <Home {...props} userLogged={this.state.userLogged} />} /> */}
     </div>
   );
 }
-
 export default App;
+
+ReactDOM.render(<App />, document.getElementById("root"));
