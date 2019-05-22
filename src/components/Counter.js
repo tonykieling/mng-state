@@ -11,6 +11,7 @@ export default function Counter(props) {
     <div>
       <p>You clicked {Storage.count} times</p>
       <button onClick={() => Storage.setCount(Storage.count + 1)}>Click me</button>
+      <button onClick={() => Storage.setCount(Storage.count - 1)}>Minus</button>
       {/* <button onClick={() => setCount(count + 1)}>Click me</button> */}
     </div>
   );
