@@ -2,21 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom";
 import createPersistedState from "use-persisted-state";
 
-import Login from './components/Login.js'
-// import Counter from './components/Counter.js'
+// import Login from './components/Login.js'
+import Counter from './components/Counter.js'
 
-const Counter = ({ id }) => {
-  console.log("id: ", id)
-  const useCounterState = createPersistedState(id);
-  const [count, setCount] = useCounterState(0);
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-      <button onClick={() => setCount(count - 1)}>Minus</button>
-    </div>
-  );
+const Login = ({ login }) => {
+  // console.log("App-login:", login)
+  return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
 };
+
+// const Counter = ({ id }) => {
+//   console.log("id: ", id)
+//   const useCounterState = createPersistedState(id);
+//   const [count, setCount] = useCounterState(0);
+//   return (
+//     <div>
+//       <p>You clicked {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>Click me</button>
+//       <button onClick={() => setCount(count - 1)}>Minus</button>
+//     </div>
+//   );
+// };
 
 function App() {
   // Declare a new state variable, which we'll call "count"
@@ -36,8 +41,3 @@ export default App;
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
-
-// const Login = ({ login }) => {
-//   console.log("App-login:", login)
-//   return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
-// };
