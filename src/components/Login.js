@@ -10,8 +10,3 @@ export default function Login(props) {
     </div>
   )
 }
-
-
-// const Login = ({ login }) => {
-//   return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
-// };

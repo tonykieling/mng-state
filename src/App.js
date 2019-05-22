@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import createPersistedState from "use-persisted-state";
 
-// import Login from './components/Login.js'
+import Login from './components/Login.js'
 // import Counter from './components/Counter.js'
 
 const Counter = ({ id }) => {
@@ -18,10 +18,10 @@ const Counter = ({ id }) => {
   );
 };
 
-const Login = ({ login }) => {
-  console.log("App-login:", login)
-  return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
-};
+// const Login = ({ login }) => {
+//   console.log("App-login:", login)
+//   return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
+// };
 
 
 function App() {
