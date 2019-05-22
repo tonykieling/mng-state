@@ -18,17 +18,11 @@ const Counter = ({ id }) => {
   );
 };
 
-// const Login = ({ login }) => {
-//   console.log("App-login:", login)
-//   return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
-// };
-
-
 function App() {
   // Declare a new state variable, which we'll call "count"
   const useLoginState = createPersistedState("");
   const [login, setLogin] = useLoginState("");
-
+  
   return (
     <div>
       <Counter id="id1" />
@@ -41,3 +35,9 @@ function App() {
 export default App;
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+
+// const Login = ({ login }) => {
+//   console.log("App-login:", login)
+//   return login ? <h1>Hello, {login}</h1> : <h1>Not logged in</h1>;
+// };
