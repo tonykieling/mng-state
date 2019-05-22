@@ -27,7 +27,7 @@ const Login = ({ login }) => {
 function App() {
   // Declare a new state variable, which we'll call "count"
   const useLoginState = createPersistedState("");
-  const {login, setLogin} = useLoginState("");
+  const [login, setLogin] = useLoginState("");
 
   return (
     <div>
